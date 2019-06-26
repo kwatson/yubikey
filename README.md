@@ -1,6 +1,6 @@
 # yubikey
 
-[![Build Status](https://travis-ci.org/titanous/yubikey.png?branch=master)](https://travis-ci.org/titanous/yubikey)
+Originally from: https://github.com/titanous/yubikey, with patches from: https://github.com/jimworm/yubikey.
 
 ## Description
 

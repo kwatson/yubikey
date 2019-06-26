@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.name = "yubikey"
-  s.version = "1.4.1"
+  s.version = "1.4.2"
   s.description = "A library to verify, decode, decrypt and parse Yubikey one-time passwords."
   s.summary = "Yubikey library for Ruby"
 
-  s.authors = ["Jonathan Rudenberg"]
-  s.email = "jon335@gmail.com"
-  s.date = "2013-03-19"
-  s.homepage = "https://github.com/titanous/yubikey"
+  s.authors = ["Jonathan Rudenberg", "Pete Hau", "Kris Watson"]
+  s.email = "me@krisw.net"
+  s.date = "2019-06-26"
+  s.homepage = "https://github.com/kwatson/yubikey"
 
   s.extra_rdoc_files = [
       "LICENSE",
@@ -32,9 +32,9 @@ Gem::Specification.new do |s|
 
   # OpenSSL is now a dependancy
   s.add_dependency "jruby-openssl" if RUBY_PLATFORM == "java"
-  s.add_dependency "openssl" if RUBY_PLATFORM == "ruby"  
+  s.add_dependency "openssl" if RUBY_PLATFORM == "ruby"
 
   s.add_development_dependency 'rake', ">= 0.8.7"
   s.add_development_dependency 'rdoc'
-  s.add_development_dependency 'rspec', ">= 2.0"  
+  s.add_development_dependency 'rspec', ">= 3.0.0"
 end

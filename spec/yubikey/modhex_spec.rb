@@ -2,31 +2,26 @@
 describe 'Yubikey::Modhex' do
 
   it 'decodes modhex' do
-    Yubikey::ModHex.decode('hknhfjbrjnlnldnhcujvddbikngjrtgh').should == "i\266H\034\213\253\242\266\016\217\"\027\233X\315V"
-    Yubikey::ModHex.decode('urtubjtnuihvntcreeeecvbregfjibtn').should == "\354\336\030\333\347o\275\f33\017\0345Hq\333"
+    expect(Yubikey::ModHex.decode('hknhfjbrjnlnldnhcujvddbikngjrtgh')).to eq("i\266H\034\213\253\242\266\016\217\"\027\233X\315V")
+    expect(Yubikey::ModHex.decode('urtubjtnuihvntcreeeecvbregfjibtn')).to eq("\354\336\030\333\347o\275\f33\017\0345Hq\333")
 
-    Yubikey::ModHex.decode('dteffuje').should == "-4N\203"
-
-    Yubikey::ModHex.decode('ifhgieif').should == 'test'
-    Yubikey::ModHex.decode('hhhvhvhdhbid').should == 'foobar'
-
-    Yubikey::ModHex.decode('cc').should == "\000"
+    expect(Yubikey::ModHex.decode('dteffuje')).to eq("-4N\203")
+    expect(Yubikey::ModHex.decode('ifhgieif')).to eq('test')
+    expect(Yubikey::ModHex.decode('hhhvhvhdhbid')).to eq('foobar')
+    expect(Yubikey::ModHex.decode('cc')).to eq("\000")
   end
 
   it 'encode modhex' do
-    Yubikey::ModHex.encode("i\266H\034\213\253\242\266\016\217\"\027\233X\315V").should == 'hknhfjbrjnlnldnhcujvddbikngjrtgh'
-    Yubikey::ModHex.encode("\354\336\030\333\347o\275\f33\017\0345Hq\333").should == 'urtubjtnuihvntcreeeecvbregfjibtn'
-
-    Yubikey::ModHex.encode("-4N\203").should == 'dteffuje'
-
-    Yubikey::ModHex.encode('test').should == 'ifhgieif'
-    Yubikey::ModHex.encode('foobar').should == 'hhhvhvhdhbid'
-
-    Yubikey::ModHex.encode("\000").should == 'cc'
+    expect(Yubikey::ModHex.encode("i\266H\034\213\253\242\266\016\217\"\027\233X\315V")).to eq('hknhfjbrjnlnldnhcujvddbikngjrtgh')
+    expect(Yubikey::ModHex.encode("\354\336\030\333\347o\275\f33\017\0345Hq\333")).to eq('urtubjtnuihvntcreeeecvbregfjibtn')
+    expect(Yubikey::ModHex.encode("-4N\203")).to eq('dteffuje')
+    expect(Yubikey::ModHex.encode('test')).to eq('ifhgieif')
+    expect(Yubikey::ModHex.encode('foobar')).to eq('hhhvhvhdhbid')
+    expect(Yubikey::ModHex.encode("\000")).to eq('cc')
   end
 
   it 'raise an error when modhex string length uneven' do
-    lambda { Yubikey::ModHex.decode('ifh') }.should raise_error(ArgumentError)
+    expect { Yubikey::ModHex.decode('ifh') }.to raise_error(ArgumentError)
   end
 
 end
