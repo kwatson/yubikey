@@ -1,6 +1,6 @@
 # yubikey
 
-Originally from: https://github.com/titanous/yubikey, with patches from: https://github.com/jimworm/yubikey.
+Originally from: https://github.com/titanous/yubikey
 
 ## Description
 
@@ -64,4 +64,6 @@ The MIT License. See [LICENSE](https://github.com/titanous/yubikey/blob/master/L
 
 ### Contributors
 
-[List of contributors](https://github.com/titanous/yubikey/graphs/contributors)
+* [List of contributors](https://github.com/titanous/yubikey/graphs/contributors)
+* https://github.com/jimworm/yubikey
+* https://github.com/kipusystems/yubikey
