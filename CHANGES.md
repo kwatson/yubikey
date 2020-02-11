@@ -5,4 +5,3 @@
 ### Feb 10, 2020
 
 * Update certificate and add script to update cert going forward.
-  * Taken from [kipusystems/yubikey](https://github.com/kipusystems/yubikey)

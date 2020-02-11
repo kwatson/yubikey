@@ -54,6 +54,16 @@ If you're using Bundler, add the gem to Gemfile.
 
 Then run bundle install.
 
+## Updating certificate chain
+
+`cd` into `build_cert` and run:
+
+```bash
+make
+make install
+make clean
+```
+
 ## Copyright
 
 ### Ruby library
@@ -66,4 +76,3 @@ The MIT License. See [LICENSE](https://github.com/titanous/yubikey/blob/master/L
 
 * [List of contributors](https://github.com/titanous/yubikey/graphs/contributors)
 * https://github.com/jimworm/yubikey
-* https://github.com/kipusystems/yubikey
